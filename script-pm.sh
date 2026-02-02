@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "\e[32mStarting project MatuleRiverpod...\e[0m"
+alias melos='dart pub global run melos'

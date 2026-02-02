@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:app/src/features/main/presentation/pages/home_page.dart';
 import 'package:ui/ui.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -28,10 +30,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: mySuperColor),
+        colorScheme: ColorScheme.fromSeed(seedColor: MyColor.MySuperColor),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage()
     );
   }
 }

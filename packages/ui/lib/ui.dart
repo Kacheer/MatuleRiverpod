@@ -1,2 +1,5 @@
 import 'package:flutter/material.dart';
-const mySuperColor = Colors.deepPurpleAccent;
+
+class MyColor {
+  static const MySuperColor = Colors.amber;
+}
