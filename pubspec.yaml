@@ -1,15 +1,21 @@
 name: my_proj
+description: "A new Flutter project."
+publish_to: 'none'
+
 environment:
-  sdk: ">=3.6.0 <4.0.0"
+  sdk: '^3.6.0'
+
 dev_dependencies:
-  melos: ^7.4.0
-  riverpod_generator: ^4.0.0+1 # Try 2.6.3 or go up to 3.0.0-dev if available
-  riverpod_lint: ^3.1.0
-  custom_lint: ^0.8.1
-  build_runner: ^2.6.1
-  json_serializable: ^6.9.0 # Dropping slightly can sometimes resolve the source_gen conflict
-dependencies:
-  flutter_riverpod: ^3.1.0
-  riverpod_annotation: ^4.0.0
-  json_annotation: ^4.9.0
+  melos: ^6.1.0
+
+packages:
+  - packages/**
+
+scripts:
+  get:
+    exec: flutter pub get
+  build:
+    exec: dart run build_runner build --delete-conflicting-outputs
+  clean:
+    exec: flutter clean
 
