@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:app/src/features/main/presentation/widgets/banners.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ui/components/input/beautiful_input.dart';
@@ -28,75 +29,23 @@ class _HomePageState extends ConsumerState<HomePage> {
                   child: CustomInput(hintText:  "Искать описание")
                 ),
                 Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Text("Акции и новости"),
+                  padding: const EdgeInsets.fromLTRB(20, 32, 20, 16),
+                  child: Text("Акции и новости", 
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF939396)
+                  ),),
                 ),
-                SizedBox(
-                  height: 152,
-                  child: PageView(
-                    padEnds: false,
-                    controller: PageController(
-                        viewportFraction:
-                            0.85),
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 20,
-                            right: 16),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.blueAccent,
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: Center(
-                              child: Padding(
-                            padding: EdgeInsets.all(16),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(
-                                        width: 150,
-                                        child: Flexible(
-                                          child: Text(
-                                            'Шорты Вторник',
-                                            style: TextStyle(fontSize: 20),
-                                            maxLines: 2,
-                                            overflow: TextOverflow.clip,
-                                          ),
-                                        )),
-                                    Text('4000 ₽'),
-                                  ],
-                                ),
-                                Spacer(),
-                                Icon(Icons.discount_rounded),
-                              ],
-                            ),
-                          )),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Container(
-                          width: 20,
-                          decoration: BoxDecoration(
-                            color: Colors.greenAccent,
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child:
-                              const Center(child: Text('Рубашка Воскресенье')),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                Banners(),
                 Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Text("Каталог описаний"),
+                  padding: const EdgeInsets.fromLTRB(20, 32, 20, 16),
+                  child: Text("Каталог описаний", 
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF939396)
+                  ),),
                 ),
               ],
             )));

@@ -17,59 +17,88 @@ class _BannersState extends ConsumerState<Banners> {
       height: 152,
       child: PageView(
         padEnds: false,
-        controller: PageController(
-            viewportFraction: 0.85),
+        controller: PageController(viewportFraction: 0.85),
         children: [
           Padding(
-            padding: const EdgeInsets.only(
-                left: 20, right: 16),
+            padding: const EdgeInsets.only(left: 20, right: 10),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: const Color(0xFF48C1D8),
                 borderRadius: BorderRadius.circular(16),
+                gradient: const LinearGradient(colors: [
+                  Color(0xFF97D9F0),
+                  Color(0xFF92E9D4)
+                ])
               ),
-              child: Center(
-                  child: Padding(
-                padding: EdgeInsets.all(16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+              child: Row(
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                            width: 150,
-                            child: Flexible(
-                              child: Text(
-                                'Шорты Вторник',
-                                style: AppFonts.title2Heavy,
-                                maxLines: 2,
-                                overflow: TextOverflow.clip,
-                              ),
-                            )),
-                        Text('4000 ₽'),
-                      ],
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Шорты\nВторник',
+                            style: AppFonts.title2Heavy
+                                .copyWith(color: Colors.white),
+                          ),
+                          Text(
+                            '4000 ₽',
+                            style: AppFonts.title2Heavy
+                                .copyWith(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      )
                     ),
-                    Spacer(),
-                    Icon(Icons.discount_rounded),
+                    Image(image:  AssetImage('assets/images/covid-vaccine.png'), width: 150, height: 150)
                   ],
                 ),
-              )),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: Container(
-              width: 20,
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(16),
               ),
-              child: const Center(child: Text('Рубашка Воскресенье')),
             ),
-          ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 10),
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xFF48C1D8),
+                borderRadius: BorderRadius.circular(16),
+                gradient: const LinearGradient(colors: [
+                  Color(0xFF97D9F0),
+                  Color(0xFF92E9D4)
+                ])
+              ),
+              child: Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Рубашка\nВоскресенье',
+                            style: AppFonts.title2Heavy
+                                .copyWith(color: Colors.white),
+                          ),
+                          Text(
+                            '4000 ₽',
+                            style: AppFonts.title2Heavy
+                                .copyWith(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      )
+                    ),
+                    Image(image:  AssetImage('assets/images/shirt.png'), width: 200, height: 200, fit: BoxFit.fitHeight)
+                  ],
+                ),
+              ),
+            ),
         ],
       ),
     );

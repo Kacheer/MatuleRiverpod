@@ -43,6 +43,9 @@ class _CustomInputState extends ConsumerState<CustomInput> {
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.search),
         prefixIconColor: AppColors.description,
+        filled: true,
+        fillColor: AppColors.inputBg,
+        hoverColor: AppColors.inputBg,
         hintStyle: GoogleFonts.robotoFlex(
           color: Color(0xFF9E9E9E),
           fontSize: 16,

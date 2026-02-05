@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppFonts {
   AppFonts._();
-  static const TextStyle title2Heavy = TextStyle(
-    fontFamily: 'SF Pro Display',
-    fontSize: 32,
-    fontWeight: FontWeight.w700,
+  static final TextStyle title2Heavy = GoogleFonts.robotoFlex(
+    fontSize: 20,
+    fontWeight: FontWeight.w800,
   );
 
 
