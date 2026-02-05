@@ -72,7 +72,7 @@ class _BannersState extends ConsumerState<Banners> {
               ),
               child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 150,
                       child: Padding(
                         padding: EdgeInsets.all(16),

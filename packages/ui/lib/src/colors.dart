@@ -7,7 +7,7 @@ class AppColors {
   static const Color white = Color(0xFFF7F7F7);
   static const Color error = Color(0xFFFF4646);
   static const Color success = Color(0xFF00B412);
-  static const Color inputBg = Color(0xFFF7F7FA);
+  static const Color inputBg = Color(0xFFF5F5F9);
   static const Color inputStroke = Color(0xFFE6E6E6);
   static const Color inputIcon = Color(0xFFBFC7D1);
   static const Color placeholder = Color(0xFF98989A);

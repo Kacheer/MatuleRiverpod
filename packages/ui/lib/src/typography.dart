@@ -7,6 +7,10 @@ class AppFonts {
     fontSize: 20,
     fontWeight: FontWeight.w800,
   );
+  static final TextStyle headlineMedium = GoogleFonts.roboto(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
 
 
 }
